@@ -29,6 +29,9 @@ public class _Stream {
                 .mapToInt(String::length)
                 .forEach(System.out::println);
 
+        boolean containsOnlyFemales = people.stream()
+                .allMatch(person -> FEMALE.equals(person.gender));
+        System.out.println(containsOnlyFemales);
     }
 
     static class Person {
